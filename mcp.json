@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "bch-dao-cashtoken-ai": {
+      "command": "cargo",
+      "args": [
+        "run",
+        "--release",
+        "--quiet"
+      ],
+      "env": {
+        "RUST_LOG": "info",
+        "HACKATHON_TRACK": "Bitcoin Cash",
+        "PROJECT_TICKER": "BCHDAO"
+      },
+      "tools": [
+        {
+          "name": "verify_bchdao_invariants",
+          "description": "Verifies deterministic invariants for BCH DAO CashToken AI on Bitcoin Cash."
+        },
+        {
+          "name": "execute_bchdao_action",
+          "description": "Executes authenticated Governance state transition."
+        }
+      ]
+    }
+  }
+}
